@@ -1,0 +1,153 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local BordGui = Instance.new("ScreenGui")
+local BGR = Instance.new("Frame")
+local G = Instance.new("TextLabel")
+local cl = Instance.new("Frame")
+local Speed = Instance.new("TextButton")
+local Jump = Instance.new("TextButton")""
+local Fly = Instance.new("TextButton")
+local Noclip = Instance.new("TextButton")
+local Credits = Instance.new("TextButton")
+local Cre = Instance.new("TextLabel")
+
+--Properties:
+
+BordGui.Name = "BordGui"
+BordGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+BordGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+BGR.Name = "BGR"
+BGR.Parent = BordGui
+BGR.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+BGR.BorderSizePixel = 0
+BGR.Position = UDim2.new(0.0109489085, 0, 0.0758377388, 0)
+BGR.Size = UDim2.new(0, 581, 0, 222)
+
+G.Name = "G"
+G.Parent = BordGui
+G.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+G.BorderSizePixel = 0
+G.Position = UDim2.new(0.0109489048, 0, 0.0758377388, 0)
+G.Size = UDim2.new(0, 581, 0, 27)
+G.Font = Enum.Font.SourceSans
+G.Text = "GhostV"
+G.TextColor3 = Color3.fromRGB(255, 0, 4)
+G.TextSize = 30.000
+G.TextWrapped = true
+
+cl.Name = "cl"
+cl.Parent = BordGui
+cl.BackgroundColor3 = Color3.fromRGB(255, 0, 4)
+cl.BorderSizePixel = 0
+cl.Position = UDim2.new(0.0109489048, 0, 0.139329806, 0)
+cl.Size = UDim2.new(0, 581, 0, 4)
+
+Speed.Name = "Speed"
+Speed.Parent = BordGui
+Speed.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
+Speed.BorderSizePixel = 0
+Speed.Position = UDim2.new(0.0241369605, 0, 0.165784836, 0)
+Speed.Size = UDim2.new(0, 200, 0, 44)
+Speed.Font = Enum.Font.SourceSans
+Speed.Text = "Speed"
+Speed.TextColor3 = Color3.fromRGB(255, 0, 4)
+Speed.TextScaled = true
+Speed.TextSize = 14.000
+Speed.TextWrapped = true
+
+Jump.Name = "Jump"
+Jump.Parent = BordGui
+Jump.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
+Jump.BorderSizePixel = 0
+Jump.Position = UDim2.new(0.280821592, 0, 0.165784851, 0)
+Jump.Size = UDim2.new(0, 200, 0, 44)
+Jump.Font = Enum.Font.SourceSans
+Jump.Text = "Jump"
+Jump.TextColor3 = Color3.fromRGB(255, 0, 4)
+Jump.TextScaled = true
+Jump.TextSize = 14.000
+Jump.TextWrapped = true
+
+Fly.Name = "Fly"
+Fly.Parent = BordGui
+Fly.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
+Fly.BorderSizePixel = 0
+Fly.Position = UDim2.new(0.0241369605, 0, 0.257495582, 0)
+Fly.Size = UDim2.new(0, 200, 0, 44)
+Fly.Font = Enum.Font.SourceSans
+Fly.Text = "Fly"
+Fly.TextColor3 = Color3.fromRGB(255, 0, 4)
+Fly.TextScaled = true
+Fly.TextSize = 14.000
+Fly.TextWrapped = true
+
+Noclip.Name = "Noclip"
+Noclip.Parent = BordGui
+Noclip.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
+Noclip.BorderSizePixel = 0
+Noclip.Position = UDim2.new(0.280386895, 0, 0.257495612, 0)
+Noclip.Size = UDim2.new(0, 200, 0, 44)
+Noclip.Font = Enum.Font.SourceSans
+Noclip.Text = "NoClip"
+Noclip.TextColor3 = Color3.fromRGB(255, 0, 4)
+Noclip.TextScaled = true
+Noclip.TextSize = 14.000
+Noclip.TextWrapped = true
+
+Credits.Name = "Credits"
+Credits.Parent = BordGui
+Credits.BackgroundColor3 = Color3.fromRGB(54, 54, 54)
+Credits.BorderSizePixel = 0
+Credits.Position = UDim2.new(0.149847567, 0, 0.363315731, 0)
+Credits.Size = UDim2.new(0, 200, 0, 44)
+Credits.Font = Enum.Font.SourceSans
+Credits.Text = "Credits"
+Credits.TextColor3 = Color3.fromRGB(255, 0, 4)
+Credits.TextScaled = true
+Credits.TextSize = 14.000
+Credits.TextWrapped = true
+
+Cre.Name = "Cre"
+Cre.Parent = BordGui
+Cre.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+Cre.BorderSizePixel = 0
+Cre.Position = UDim2.new(0.450146109, 0, 0.0335097015, 0)
+Cre.Size = UDim2.new(0, 353, 0, 418)
+Cre.Visible = false
+Cre.Font = Enum.Font.SourceSans
+Cre.Text = "Bu Script Exelt Tarafından Kazmaya özel hazırlanmıştır"
+Cre.TextColor3 = Color3.fromRGB(255, 0, 4)
+Cre.TextScaled = true
+Cre.TextSize = 14.000
+Cre.TextWrapped = true
+
+-- Scripts:
+
+local function QTGGES_fake_script() -- Speed.SpeedClient 
+	local script = Instance.new('LocalScript', Speed)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 100
+	end)
+end
+coroutine.wrap(QTGGES_fake_script)()
+local function MWEL_fake_script() -- Jump.JumpClient 
+	local script = Instance.new('LocalScript', Jump)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+	end)
+end
+coroutine.wrap(MWEL_fake_script)()
+local function YCCMSBR_fake_script() -- Credits.CreClient 
+	local script = Instance.new('LocalScript', Credits)
+
+	script.Parent.MouseButton1Down:Connect(function()
+		script.Parent.Parent.Cre.Visible = not script.Parent.Parent.Cre.Visible
+	end)
+end
+coroutine.wrap(YCCMSBR_fake_script)()
